@@ -1,0 +1,54 @@
+/*========================================  header  ========================================*/
+ul {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.container-nav {
+    width: 100%;
+    margin-left: -8px;
+
+}
+
+
+
+
+/*========================================  body  ========================================*/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.imageProfile {
+    width: 200px;
+
+}
+
+.hiUser {
+    font-size: 30px;
+    text-align: center;
+}
+
+.containerProfile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#map {
+    height: 20%;
+    width: 20%;
+  }

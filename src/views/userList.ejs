@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Películas</title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+
+<body>
+    
+    <%- include('partials/headerNavbar') %>
+
+    <h1>LISTADO DE USUARIOS</h1>
+    <ul>
+        <% for( let i = 0; i < humanos.length; i++ ) { %>
+        <li>
+            <a href="/userlist/<%= humanos[i].id_humano %>"><%= humanos[i].nombreUsuario %></a>
+        </li>
+        <% } %>
+
+    </ul>
+</body>
+
+</html>

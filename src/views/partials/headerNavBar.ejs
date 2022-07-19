@@ -1,0 +1,49 @@
+<% if (locals.usuario==undefined) { %>
+  <header>
+    <nav>
+      <div class="container-nav">
+        <ul class="ul">
+          <li class="nvLink"><a class="a-header" href="/login">INGRESA</a></li>
+          <li class="nvLink"><a class="a-header" href="/register">REGISTRATE</a></li>
+          <li class="nvLink"><a class="a-header" href="#">CONTACTO</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <%} else { %>
+    <header>
+      <nav>
+        <div class="container-nav">
+          <ul class="ul">
+            <li class="nvLink"><a class="a-header" href="/pets">PERFIL DE MIS MASCOTAS</a></li>
+            <li class="nvLink"><a class="a-header" href="#">ENCONTRE UNA MASCOTA</a></li>
+            <li class="nvLink"><a class="a-header" href="#">SOPORTE</a></li>
+            <li class="nvLink"><a class="a-header" href="/logout">SALIR</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <% }%>
+
+      <!-- <form class="form-inline">
+  <label class="sr-only" for="inlineFormInputName2">Name</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+
+  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">@</div>
+    </div>
+    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+  </div>
+
+  <div class="form-check mb-2 mr-sm-2">
+    <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+    <label class="form-check-label" for="inlineFormCheck">
+      Remember me
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+ -->

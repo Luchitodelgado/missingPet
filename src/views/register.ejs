@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+    <body>
+
+        <%- include('partials/headerNavbar') %>
+
+
+            <main>
+                <h1>Crea tu cuenta</h1>
+                <form action="/register" method="POST" enctype="multipart/form-data">
+                    <div>
+                        <input type="text" required name="nombre_usuario" placeholder="Nombre de usuario:"
+                            value="<%= locals.oldData ? oldData.nombre_usuario :null %>"
+                            class="form-data <%= locals.errors && errors.nombre_usuario ? 'is-invalid':null %>">
+                        </input>
+                    </div>
+                    <% if (locals.errors && errors.nombre_usuario) { %>
+                        <div class="error-formulario">
+                            <%= errors.nombre_usuario.msg %>
+                        </div>
+                        <% } %>
+                            <div>
+                                <input type="text" required name="nombre" placeholder="nombre"></input>
+                            </div>
+                            <div>
+                                <input type="text" required name="apellido" placeholder="apellido"></input>
+                            </div>
+                            <div>
+                                <input type="email" required name="email" placeholder="Email"></input>
+                            </div>
+                            <div>
+                                <input type="number" required name="telefono" placeholder="Telefono"></input>
+                            </div>
+                            <div>
+                                <input type="text" required name="domicilio" placeholder="Domicilio"></input>
+                            </div>
+                            <div>
+                                <label for="fotoPerfil">Foto de perfil</label>
+                                <input type="file" required name="fotoPerfil">
+                            </div>
+                            <div>
+                                <label for="password">Contraseña</label>
+                                <br>
+                                <input type="password" required name="password" />
+                            </div>
+                            <div>
+                                <label for="password2">Confirmar contraseña</label>
+                                <br>
+                                <input type="password" required name="password2" />
+                            </div>
+                            <div> <button type="submit">Enviar</button> <button type="reset">Borrar</button>
+                            </div>
+                </form>
+
+            </main>
+
+    </body>
+
+</html>

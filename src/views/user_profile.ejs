@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+    <%- include('partials/headerNavbar') %>
+    <p class="hiUser"> Hola <%= locals.usuario.nombre %> !</p>
+
+    <div class="containerProfile">
+     <img class="imageProfile" src="/img/img-usuarios/<%= locals.usuario.fotoPerfil %>">
+     </div>
+     
+  
+</html>
+</body>

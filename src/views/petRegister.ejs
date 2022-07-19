@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %>
+
+    <body>
+
+        <header>
+            <nav>
+                <div class="container-nav">
+                    <ul class="ul">
+                        <li class="nvLink"><a class="a-header" href="/profile">Mi perfil</a></li>
+                        <li class="nvLink"><a class="a-header" href="/logout">Salir</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <p class="hiUser">
+                Agregar una nueva mascota
+            </p>
+
+            <form action="/register" method="POST" enctype="multipart/form-data">
+                <% if (locals.errors && errors.nombre_usuario) { %>
+                    <div class="error-formulario">
+                        <%= errors.nombre_usuario.msg %>
+                    </div>
+                    <% } %>
+                        <div>
+                            <input type="text" required name="petName" placeholder="Nombre de tu mascota"></input>
+                        </div>
+                        <div>
+                            <input type="text" required name="petDescription"
+                                placeholder="Describe a tu mascota"></input>
+                        </div>
+                        <div>
+                            <label for="petImg">Sube fotos de tu mascota</label>
+                            <input type="file" required name="petImg">
+                        </div>
+                        <div>
+                            <button type="submit">Enviar</button>
+                        </div>
+            </form>
+        </main>
+    </body>
+
+</html>
